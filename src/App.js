@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <View style={styles.main}>
+      <Text style={styles.primaryText}>
+         React native web is pretty cool
+      </Text>
+      <Text style={styles.secondaryText}>yep, this is a RN text</Text>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  main: {
+    backgroundColor: "#ccc",
+    paddingTop: 80,
+    paddingBottom: 40,
+    paddingRight: 30,
+    paddingLeft: 60,
+  },
+  primaryText: {
+    color: "blue",
+    fontSize: 40,
+  },
+  secondaryText: {
+    color: "green",
+    fontSize: 30,
+  },
+});
 
 export default App;
